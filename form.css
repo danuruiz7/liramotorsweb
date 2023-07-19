@@ -1,0 +1,191 @@
+.form-container {
+  flex-direction: column;
+}
+
+.info-form {
+  text-align: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-form {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-form {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  opacity: 0.5;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  background-color: rgb(216, 253, 253);
+}
+
+.input-name {
+  width: 45%;
+  margin-right: 3.2rem;
+  animation: left 1s;
+}
+
+.input-email {
+  width: 45%;
+  animation: right 1s;
+}
+
+.input-asunto {
+  width: 100%;
+  margin: 1rem 0;
+  animation: left 1s;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  animation: right 1s;
+}
+
+textarea::placeholder {
+  font-family: sans-serif;
+}
+
+.check {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background: rgb(54, 54, 54);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(54, 54, 54 1) 25%,
+    rgba(54, 54, 54, 1) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+input[type="submit"]:active {
+  transform: translateY(3px);
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.localizar {
+}
+
+.map {
+  border: none;
+  border-radius: 25px;
+  width: 40%;
+  animation: left 1s;
+}
+
+.whatsapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ws {
+  width: 100%;
+  animation: right 1s;
+}
+
+.movil {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  animation: right 0.8s;
+}
+
+.movil a:hover {
+  color: rgb(97, 97, 255);
+}
+
+/*************************************************ANIMACIONES****************************************/
+
+/************************************************ RESPONSIVE***************************************/
+@media (max-width: 599px) {
+  .input-name {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .input-email {
+    width: 100%;
+  }
+
+  .localizar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1010px) {
+  .input-name {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .input-email {
+    width: 100%;
+  }
+
+  .localizar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
