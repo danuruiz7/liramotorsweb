@@ -20,6 +20,9 @@
 }
 
 form {
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,24 +31,19 @@ form {
   margin-right: auto;
 }
 
+form [required]:valid {
+  border: 2px solid var(--form-ok-color);
+}
+form [required]:invalid {
+  border: 2px solid var(--form-error-color);
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
   padding: 0.8rem;
   border: none;
   border-radius: 25px;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-textarea:hover {
-  opacity: 0.5;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  background-color: rgb(216, 253, 253);
 }
 
 .input-name {
@@ -69,6 +67,7 @@ textarea {
   width: 100%;
   resize: none;
   animation: right 1s;
+  font-family: sans-serif;
 }
 
 textarea::placeholder {
@@ -112,7 +111,31 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-.localizar {
+.alert {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.alert span {
+  background-color: #f44336;
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.alert p {
+  background-color: #4caf50;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 25px;
 }
 
 .map {
@@ -145,7 +168,7 @@ input[type="submit"]:hover {
   color: rgb(97, 97, 255);
 }
 
-/*************************************************ANIMACIONES****************************************/
+/*************************************************Validadiones****************************************/
 
 /************************************************ RESPONSIVE***************************************/
 @media (max-width: 599px) {
@@ -198,4 +221,12 @@ input[type="submit"]:hover {
     margin-top: 1rem;
     animation: latir 2s infinite;
   }
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
 }
