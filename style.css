@@ -38,6 +38,7 @@ body {
   background-image: url(/img/Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 /********************************** HEADER ********************************************/
 header {
@@ -160,10 +161,10 @@ main {
   background: rgb(54, 54, 54);
   background: radial-gradient(
     circle,
-    rgba(54, 54, 54, 1) 0%,
-    rgba(0, 0, 0, 1) 25%,
-    rgba(0, 0, 0, 1) 75%,
-    rgba(54, 54, 54, 1) 100%
+    rgba(0, 0, 0, 1) 0%,
+    rgba(54, 54, 54, 1) 25%,
+    rgba(54, 54, 54, 1) 75%,
+    rgba(0, 0, 0, 1) 100%
   );
   padding: 0.5rem 1rem;
   width: fit-content;
@@ -315,6 +316,9 @@ small {
 /****************************RESPONSIVE***********************/
 
 @media (max-width: 599px) {
+  body {
+    overflow-x: hidden;
+  }
   .logo-animado {
     animation: latir 1s infinite;
   }
@@ -331,18 +335,20 @@ small {
     align-items: center;
     position: absolute;
     top: 0;
-    right: -100%;
-    padding: 1rem;
+    right: 0%;
+    padding: 1.5rem 1rem;
     background-color: rgb(54, 54, 54, 0.8);
     width: 25%;
     height: 100vh;
     border-radius: 25px 0px 0px 25px;
-    color: red;
-    transition: right ease-in-out 0.5s;
+    transition: opacity ease 1s;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .menu-responsive {
-    right: 0%;
+    opacity: 1;
+    visibility: visible;
   }
 
   .navbar ul li a {
@@ -420,18 +426,19 @@ small {
     align-items: center;
     position: absolute;
     top: 0;
-    right: -100%;
+    right: 0;
     padding: 1rem;
     background-color: rgb(54, 54, 54, 0.8);
     width: 25%;
     height: 100vh;
     border-radius: 25px 0px 0px 25px;
     color: red;
-    transition: right ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.5s;
+    opacity: 0;
   }
 
   .menu-responsive {
-    right: 0%;
+    opacity: 1;
   }
 
   .navbar ul li a {

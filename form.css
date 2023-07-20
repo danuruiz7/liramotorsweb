@@ -167,6 +167,11 @@ input[type="submit"]:hover {
     width: 100%;
     margin-bottom: 1rem;
   }
+
+  .movil {
+    font-size: 2rem;
+    animation: latir 2s infinite;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1010px) {
@@ -187,5 +192,10 @@ input[type="submit"]:hover {
   .map {
     width: 100%;
     margin-bottom: 1rem;
+  }
+
+  .movil {
+    margin-top: 1rem;
+    animation: latir 2s infinite;
   }
 }
