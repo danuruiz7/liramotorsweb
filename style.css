@@ -337,11 +337,11 @@ small {
     top: 0;
     right: 0%;
     padding: 1.5rem 1rem;
-    background-color: rgb(54, 54, 54, 0.8);
+    background-color: rgb(54, 54, 54, 0.9);
     width: 25%;
     height: 100vh;
     border-radius: 25px 0px 0px 25px;
-    transition: opacity ease 1s;
+    transition: opacity ease 0.4s;
     visibility: hidden;
     opacity: 0;
   }
