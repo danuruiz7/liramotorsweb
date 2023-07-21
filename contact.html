@@ -67,6 +67,7 @@
               title="Sólo acepta letras y espacios en blanco"
               type="text"
               placeholder="Nombre y Apellido"
+              required
             />
             <input
               class="input-email"
@@ -75,6 +76,7 @@
               id="email"
               type="email"
               placeholder="Email"
+              required
             />
 
             <input
@@ -83,6 +85,7 @@
               id="asunto"
               type="text"
               placeholder="Asunto"
+              required
             />
             <textarea
               name="msj"
@@ -90,7 +93,7 @@
               cols="30"
               rows="10"
               placeholder="Escribe tu Mensaje"
-              data-pattern="^.{1,255}$"
+              required
             ></textarea>
             <div class="check">
               <!-- <input id="check" type="checkbox" placeholder="" name="check" />
@@ -100,6 +103,7 @@
               > -->
             </div>
             <input type="submit" value="Enviar" />
+
             <div class="alert"></div>
           </form>
         </article>
